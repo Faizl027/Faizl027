@@ -89,7 +89,7 @@ def banner():
 	
 
 \33[1;33m█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-\33[1;33m█  \33[mGithub: https://github.com/j
+\33[1;33m█  \33[mGithub: https://github.com/Faizl027
 \33[1;33m█  \33[mFacebook: Muhammad Faizal XD
 \33[1;33m█  \33[mWhatsApp: 081548733745
 \33[1;33m█  \33[mTools : \33[1;33mFREE
