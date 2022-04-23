@@ -1,4 +1,4 @@
-#Jepri Barus
+#Faizal
 #ikeh ikeh kimochi
 
 import os, sys, subprocess, platform
