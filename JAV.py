@@ -31,7 +31,7 @@ except:ugen2 = [
 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.76 Safari/537.36"]
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
 
-x = '\33[m' # DEFAULT
+x = '\33[m' # HIJAU
 k = '\033[93m' # KUNING +
 h = '\x1b[1;92m' # HIJAU +
 hh = '\033[32m' # HIJAU -
