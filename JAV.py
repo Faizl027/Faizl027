@@ -96,34 +96,6 @@ def banner():
 \33[1;33m█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 """%(h))
 
-###----------[ CREATE FOLDER ]---------- ###
-def mkdir_data_login():
-    # Make Directory Login Data
-    try:os.mkdir("login")
-    except:pass
-    # Make Directory Dump
-    try:os.mkdir("dump")
-    except:pass
-    # Make Directory Pass
-    try:os.mkdir("tool")
-    except:pass
-    # Make Directory Result
-    try:os.mkdir("CP")
-    except:pass
-    # Make Directory Result
-    try:os.mkdir("OK")
-    except:pass
-    # Make Directory License
-    try:os.mkdir("license")
-    except:pass
-    # Delete Cookies
-    try:os.remove('login/cookie.json')
-    except:pass
-    # Delete Token
-    try:os.remove('login/token.json')
-    except:pass
-
-###----------[ LOGIN ]---------- ###
 def login():
     resik()
     mkdir_data_login()
