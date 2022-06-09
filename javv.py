@@ -92,7 +92,7 @@ def banner():
 \33[1;33m█  \33[mGithub: https://github.com/Faizl027
 \33[1;33m█  \33[mFacebook: Muhammad Faizal XD
 \33[1;33m█  \33[mWhatsApp: 081548733745
-\33[1;33m█  
+\33[1;33m█  \33[mTools : \33[1;33mPRIVAT
 \33[1;33m█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 """%(h))
 
@@ -115,32 +115,21 @@ def login():
 		except IOError:
 			login_kontol()
 
-def login_kontol():
-	banner()
-	print("""%s ●▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬● """%(h))
-	print("""%s    \33[1;32mMASUKAN TOKEN FACEBOOK """%(h))
-	print("""%s ●▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬● """%(h))
-	panda = input(x+'\33[1;96m•Token> ')
-	akun=open('.token.txt','w').write(panda)
+# LOGIN
+def login_lagi334():
 	try:
-		tes = requests.get('https://graph.facebook.com/me?access_token='+panda)
-		tes3 = json.loads(tes.text)['name']
-		print("""%s \n"""%(h))
-		print("""%s ●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬● """%(h))
-		jalan('%s╚══[%s✓%s] %s\33[1;96mLOGIN BERHASIL JALANKAN ULANG TOOLS'%(M,P,M,P))
-		print("""%s ●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬● """%(h))
-		print("""%s \33[1;96mJalan kan perintah python barus.py """%(h))
-		time.sleep(2.5)
+		banner()
+		___kontol___ = input('[|] Masukkan Cookies : ')
+		data = requests.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":___kontol___}) 
+		find_token = re.search("(EAAG\w+)", data.text)
+		ken=open(".token.txt", "w").write(find_token.group(1))
+		cok=open(".cok.txt", "w").write(___kontol___)
+		print('\n LOGIN SUCCESSFULLY');time.sleep(1)
 		exit()
-	except KeyError:
-		print("""%s \n"""%(h))
-		jalan('%s╚══[%s!%s] %sLOGIN GAGAL CEK AKUN TUMBAL ANDA'%(M,P,M,P))
-		time.sleep(2.5)
-		login_kontol()
-	except requests.exceptions.ConnectionError:
-		li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
-		lo = mark(li, style='yellow')
-		sol().print(lo, style='cyan')
+	except Exception as e:
+		os.system("rm -f .token.txt")
+		os.system("rm -f .cok.txt")
+		print('%s# EXPIRED COOKIES / CP ACCOUNT '%(h))
 		exit()
 		
 def menu(my_name):
