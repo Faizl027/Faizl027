@@ -87,35 +87,47 @@ def banner():
 	clear()
 	print("""%s
 	
-	
-\33[1;33m█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-\33[1;33m█  \33[mGithub: https://github.com/Faizl027
-\33[1;33m█  \33[mFacebook: Muhammad Faizal XD
-\33[1;33m█  \33[mWhatsApp: 081548733745
-\33[1;33m█  \33[mTools : \33[1;33mPRIVAT
-\33[1;33m█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
-"""%(h))
-
+	# BACK
+def back():
+	login()
+# BANNER
+def banner():
+	clear()
+	wel='# WELCOME TO FACEBOOK CRACK TOOL'
+	cik2=mark(wel ,style='red')
+	sol().print(cik2)
+	ban='''
+•   SATU JUTA  : WOW MURAH BANGET  •  
+ ───╔╗╔═╗──────
+╔╦╗╠╣║╬║╔═╗╔╦╗
+║╔╝║║║╔╝║╩╣║╔╝
+╚╝─╚╝╚╝─╚═╝╚╝─
+                                                        1000.000       
+'''
+	oi = nel(tekz(ban,justify='center',style='bold'), style='red')
+	cetak(nel(oi, title='[bold red] • DEVELOVER INFORMATION • [/bold red]'))
+# VALIDASI TOKEN
 def login():
 		try:
-			token = open('.token.txt','r').read(
+			token = open('.token.txt','r').read()
+			kukis = open('.cok.txt','r').read()
 			tokenku.append(token)
 			try:
-				sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
+				sy = requests.get('https://graph.facebook.com/me?fields=id,name&access_token='+tokenku[0], cookies={'cookie':kukis})
 				sy2 = json.loads(sy.text)['name']
-				menu(sy2)
+				sy3 = json.loads(sy.text)['id']
+				menu(sy2,sy3)
 			except KeyError:
-				login_kontol()
+				login_lagi334()
 			except requests.exceptions.ConnectionError:
 				banner()
-				li = '# KONEKSI INTERNET BERMASALAH'
+				li = '# PROBLEM INTERNET CONNECTION, CHECK AND TRY AGAIN'
 				lo = mark(li, style='red')
-				sol().print(lo, style='cyan')
+				sol().print(lo, style='red')
 				exit()
 		except IOError:
-			login_kontol()
+			login_lagi334()
 
-# LOGIN
 def login_lagi334():
 	try:
 		banner()
@@ -130,7 +142,7 @@ def login_lagi334():
 		os.system("rm -f .token.txt")
 		os.system("rm -f .cok.txt")
 		print('%s# EXPIRED COOKIES / CP ACCOUNT '%(h))
-		exit()
+		exit()()
 		
 def menu(my_name):
 	banner()
